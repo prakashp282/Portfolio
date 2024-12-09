@@ -76,7 +76,7 @@ const Experiences = () => {
           <div className="left-6 md:left-1/2 absolute border-opacity-20 border-gray-400 dark:border-grey-800 h-full border"></div>
 
           {experience.map((e, i) => (
-            <ExperienceCard key={i} {...e} index={i} />
+            <ExperienceCard key={i} {...e} id={i} />
           ))}
         </div>
       </div>
