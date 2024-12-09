@@ -6,7 +6,9 @@ import characterPng from "public/character.png";
 import { useSection } from "context/section";
 import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
-import { abouttext, abouttext2, abouttext3 } from "contents/about";
+import { abouttext, abouttext2, abouttext3, education } from "contents/about";
+import Experience from "@/components/Experience";
+import EduGroup from "@/components/EduGroup";
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -20,15 +22,14 @@ const AboutSection: React.FC = () => {
   const aboutSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
   useEffect(() => {
-    aboutSection ? onSectionChange!("who am i?") : onSectionChange!("");
+    aboutSection ? onSectionChange!("about") : onSectionChange!("");
   }, [aboutSection, onSectionChange]);
-
   return (
     <div
       ref={sectionRef}
       className="about-panel bg-white dark:bg-[#1B2731] relative"
     >
-      <section id="whoami" className="section">
+      <section id="about" className="section">
         <RoughNotationGroup>
           <div className="text-center">
             <RoughNotation
@@ -44,8 +45,15 @@ const AboutSection: React.FC = () => {
             </RoughNotation>
           </div>
 
-          <div className="md:grid grid-rows-3 lg:grid-rows-3 grid-cols-5">
-            <div className="col-start-1 col-end-3 row-start-1 row-end-4 lg:row-end-7 lg:col-start-1 lg:col-end-3 flex justify-center items-center py-4 lg:mb-[20%]">
+          <div className="md:grid grid-rows-3 lg:grid-rows-3 grid-cols-5 py-6">
+            <div
+              className="
+            col-start-1 col-end-3
+             row-start-1 row-end-3
+              lg:row-start-1 lg:row-end-7 
+              lg:col-start-1 lg:col-end-3 
+              flex justify-center items-center"
+            >
               <div className="relative w-72 md:w-80 h-80 flex items-center mx-auto">
                 <div className="absolute pointer-events-none scale-90 xs:scale-95 mx-auto">
                   <Image
@@ -63,10 +71,10 @@ const AboutSection: React.FC = () => {
 
             <p
               className="
-                col-start-2 col-end-5
-                row-start-4 row-end-6 
-                lg:row-start-1 lg:row-end-4 
-                lg:col-start-3 lg:col-end-6 
+                col-start-3 col-end-6
+                row-start-1 row-end-3
+                lg:row-start-1 lg:row-end-7 
+                lg:col-start-3 lg:col-end-6
                 lg:ml-8 lg:mt-auto about-intro"
             >
               {abouttext}
@@ -82,14 +90,10 @@ const AboutSection: React.FC = () => {
 
               {abouttext4} */}
             </p>
-
-            {/* <div>
-              <p className="edu-bg my-4">Here is my educational background.</p>
-              {education.map((edu) => (
-                <EduGroup edu={edu} key={edu.id} />
-              ))}
-            </div> */}
           </div>
+
+          {/* View more in section */}
+          <Experience />
         </RoughNotationGroup>
       </section>
     </div>

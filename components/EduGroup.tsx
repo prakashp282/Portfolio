@@ -1,15 +1,10 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { Education } from "types/education";
 
 type Props = {
-  edu: {
-    id: number;
-    title: string;
-    subTitle: string;
-    description: string;
-    list: string[];
-  };
+  edu: Education
 };
 
 const EduGroup: React.FC<Props> = ({ edu }) => {
@@ -69,7 +64,7 @@ const EduGroup: React.FC<Props> = ({ edu }) => {
       </div>
       <div className="overflow-hidden">
         <span className={`edu-info text-slate-500 dark:text-slate-200 italic`}>
-          {edu.description}
+          {edu.duration}
         </span>
       </div>
       <ul

@@ -1,18 +1,7 @@
 import Image from "next/image";
 
 import project1 from "public/projects/Pets.png";
-
-export type Project = {
-  title: string;
-  type: string;
-  image: JSX.Element;
-  desc: string;
-  tags: string[];
-  liveUrl: string;
-  codeUrl: string;
-  bgColor: string;
-  githubApi: string;
-};
+import { Project } from "types/project";
 
 export const projectText = {
   title: "Featured Projects",
