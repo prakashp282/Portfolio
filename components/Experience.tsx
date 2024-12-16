@@ -48,7 +48,7 @@ const Experiences = () => {
           <div className="w-fit mx-auto  p-2 dark:bg-grey-800 rounded-md flex gap-2 items-center">
             {["Experience", "Education"].map((e, i) => (
               <Button
-                // key={i}
+                key={i}
                 scrollTo="experience"
                 handleClick={() => setCategory(e)}
                 className={`py-2 px-4 rounded-md transition-colors ${

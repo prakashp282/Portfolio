@@ -8,7 +8,6 @@ import useOnScreen from "hooks/useOnScreen";
 import useScrollActive from "hooks/useScrollActive";
 import { abouttext, abouttext2, abouttext3, education } from "contents/about";
 import Experience from "@/components/Experience";
-import EduGroup from "@/components/EduGroup";
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
