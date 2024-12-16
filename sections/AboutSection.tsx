@@ -91,8 +91,6 @@ const AboutSection: React.FC = () => {
               {abouttext4} */}
             </p>
           </div>
-
-          {/* View more in section */}
           <Experience />
         </RoughNotationGroup>
       </section>

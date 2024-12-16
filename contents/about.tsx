@@ -1,4 +1,3 @@
-import { Education } from "types/education";
 import { Experience } from "types/experience";
 
 export const abouttext = `A full-stack web developer passionate about crafting user-friendly, innovative digital solutions. With over 6 years of experience in front-end and back-end development, I specialize in creating clean, scalable, and efficient web applications that empower users and drive business growth.`;
@@ -9,23 +8,23 @@ export const abouttext3 = `Beyond coding, I enjoy collaborating with clients and
 
 export const abouttext4 = `I believe that great web development is about more than just code—it’s about creating experiences that connect and inspire. Let’s build something extraordinary together!`;
 
-export const education: Education[] = [
+export const education: Experience[] = [
   {
     id: 1,
-    title: "Bachelor of Engineering",
-    subTitle: "Computer Science and Engineering",
-    duration: "2015 - 2019",
-    list: [
-      "AIR 24 : Robocon 2018 National Level",
-      "First position ACI paper publisihing 2019",
-    ],
+    company: "Higher Secondary School",
+    position: "K.V. Southern Command - Computers",
+    duration: "2013 - 2015",
+    description: [],
   },
   {
     id: 2,
-    title: "Higher Secondary School",
-    subTitle: "K.V. Southern Command - Computers",
-    duration: "2013 - 2015",
-    list: [],
+    company: "Bachelor of Engineering",
+    position: "Computer Science and Engineering",
+    description: [
+      "AIR 24 : Robocon 2018 National Level",
+      "First position ACI paper publisihing 2019",
+    ],
+    duration: "2015 - 2019",
   },
 ];
 
